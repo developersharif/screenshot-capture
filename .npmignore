@@ -1,0 +1,48 @@
+# Development files
+main.js
+screenshots/
+node_modules/
+.git/
+.gitignore
+
+# Test files
+test/
+tests/
+*.test.js
+*.spec.js
+
+# Documentation drafts
+docs/
+examples/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history

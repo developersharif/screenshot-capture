@@ -1,0 +1,48 @@
+{
+  "name": "@screenshot-tools/capture",
+  "version": "1.0.0",
+  "description": "High-performance screenshot capture tool with device presets and production-ready sizes",
+  "main": "src/index.js",
+  "bin": {
+    "screenshot-capture": "bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "screenshot",
+    "puppeteer", 
+    "web-capture",
+    "automation",
+    "image-resize",
+    "production-ready",
+    "cli-tool",
+    "batch-processing"
+  ],
+  "author": "developersharif <developersharif@yahoo.com>",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/developersharif/screenshot-capture.git"
+  },
+  "bugs": {
+    "url": "https://github.com/developersharif/screenshot-capture/issues"
+  },
+  "homepage": "https://github.com/developersharif/screenshot-capture#readme",
+  "files": [
+    "src/",
+    "bin/",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "puppeteer": "^24.12.1",
+    "sharp": "^0.34.3"
+  }
+}
