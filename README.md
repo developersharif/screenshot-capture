@@ -45,12 +45,12 @@ npm install screenshot-capture-tool
 ## CLI Usage
 
 ```bash
-screenshot-capture --help                                         # Show help
-screenshot-capture                                                # Default mobile screenshot
-screenshot-capture https://example.com desktop                    # Desktop screenshot
-screenshot-capture https://example.com mobile --size=thumbnail    # Production thumbnail
-screenshot-capture https://example.com desktop --production       # Multiple production sizes
-screenshot-capture https://example.com mobile --output=./exports  # Custom output directory
+screenshot-capture --help                                            # Show help
+screenshot-capture                                                   # Default mobile screenshot
+screenshot-capture https://example.com --device=desktop              # Desktop screenshot
+screenshot-capture https://example.com --device=mobile --size=thumbnail    # Production thumbnail
+screenshot-capture https://example.com --device=desktop --production       # Multiple production sizes
+screenshot-capture https://example.com --device=mobile --output=./exports  # Custom output directory
 ```
 
 ## Programmatic Usage

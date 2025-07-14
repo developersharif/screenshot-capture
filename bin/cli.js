@@ -12,31 +12,35 @@ async function main() {
     
     if (args.includes('--help') || args.includes('-h')) {
       console.log(`
-Usage: screenshot-capture [URL] [DEVICE] [OPTIONS]
+Usage: screenshot-capture [URL] [OPTIONS]
 
 Arguments:
   URL                Website URL (default: http://example.com/)
-  DEVICE            Device preset: desktop, laptop, tablet, mobile, mobile-large (default: mobile)
 
 Options:
+  --device=DEVICE   Device preset: desktop, laptop, tablet, mobile, mobile-large (default: mobile)
   --size=SIZE       Production size preset: thumbnail, card, social-media, etc.
   --production      Generate all common production sizes
   --output=DIR      Output directory (default: ./screenshots)
   --help, -h        Show this help
 
 Examples:
-  screenshot-capture                                          # Basic mobile screenshot
-  screenshot-capture https://example.com desktop              # Desktop screenshot
-  screenshot-capture https://example.com mobile --size=thumbnail    # Mobile thumbnail
-  screenshot-capture https://example.com desktop --production       # All production sizes
+  screenshot-capture                                                    # Basic mobile screenshot
+  screenshot-capture https://example.com --device=desktop               # Desktop screenshot
+  screenshot-capture https://example.com --device=mobile --size=thumbnail    # Mobile thumbnail
+  screenshot-capture https://example.com --device=desktop --production       # All production sizes
   
 Production sizes available: ${Object.keys(PRODUCTION_SIZES).join(', ')}
 `);
       return;
     }
     
-    const url = args[0] || 'http://example.com/';
-    const device = args[1] || 'mobile';
+    // Parse URL (first non-flag argument)
+    const url = args.find(arg => !arg.startsWith('-')) || 'http://example.com/';
+    
+    // Parse options
+    const deviceOption = args.find(arg => arg.startsWith('--device='));
+    const device = deviceOption ? deviceOption.split('=')[1] : 'mobile';
     
     const sizeOption = args.find(arg => arg.startsWith('--size='));
     const isProduction = args.includes('--production');
