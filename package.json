@@ -1,5 +1,5 @@
 {
-  "name": "@screenshot-tools/capture",
+  "name": "screenshot-capture-tool",
   "version": "1.0.0",
   "description": "High-performance screenshot capture tool with device presets and production-ready sizes",
   "main": "src/index.js",
@@ -8,8 +8,7 @@
   },
   "scripts": {
     "start": "node bin/cli.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublishOnly": "npm test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "screenshot",

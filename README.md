@@ -1,4 +1,4 @@
-# @screenshot-tools/capture
+# screenshot-capture-tool
 
 High-performance screenshot capture tool with device presets and production-ready size outputs.
 
@@ -6,10 +6,10 @@ High-performance screenshot capture tool with device presets and production-read
 
 ```bash
 # Install globally for CLI usage
-npm install -g @screenshot-tools/capture
+npm install -g screenshot-capture-tool
 
 # Install locally for programmatic usage
-npm install @screenshot-tools/capture
+npm install screenshot-capture-tool
 ```
 
 ## Features
@@ -59,7 +59,7 @@ screenshot-capture https://example.com mobile --output=./exports  # Custom outpu
 import {
   captureScreenshot,
   captureProductionScreenshots,
-} from "@screenshot-tools/capture";
+} from "screenshot-capture-tool";
 
 // Basic screenshot
 const buffer = await captureScreenshot("https://example.com", "mobile");
